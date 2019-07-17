@@ -35,9 +35,9 @@ myapp.controller("FirstController", [
     $scope.listUser = dataService.returnObj;
 
     dataService.getStandings();
-    // window.setInterval(function() {
-    //   dataService.getStandings();
-    // }, 4000);
+    window.setInterval(function() {
+      dataService.getStandings();
+    }, 1000);
 
     $scope.message = "";
     $scope.removePerson = function(person) {
