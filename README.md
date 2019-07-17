@@ -1,3 +1,7 @@
+# Test
+run: 
+    npm install karma
+
 # Exercise
 
 
