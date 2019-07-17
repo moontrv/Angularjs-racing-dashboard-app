@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html class="no-js" ng-app="myApp">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Angular Racing App</title>
+    <meta name="description" content="Exercise" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/static/css/main.css" />
+    <base href="/" />
+  </head>
+  <body>
+    <script src="/static/bower_components/angular/angular.js"></script>
+    <script src="/static/bower_components/angular-route/angular-route.js"></script>
+    <script src="/static/js/app.js"></script>
+    <header ng-include="'static/header.html'"></header>
+    <main ng-view=""></main>
+  </body>
+</html>

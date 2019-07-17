@@ -1,0 +1,26 @@
+<div class="container content">
+  <h1>Single team</h1>
+
+  <h4>ID : {{ team.id }} - Car : {{ team.car }} - Team : {{ team.team }}</h4>
+  <li
+    ng-repeat="listUserOfATeamItem in listUserOfATeam"
+    ng-show="teamID == listUserOfATeamItem.team"
+  >
+    <img
+      ng-src="static/images/car.jpg"
+      style="margin: -12px 10px 0 0; float: left; height: 50px;"
+    />
+    <h3>
+      {{ listUserOfATeamItem.driver }} ({{
+        listUserOfATeamItem.country.toUpperCase()
+      }}) - Team
+      {{ listUserOfATeamItem.team }}
+    </h3>
+    <span class="level" style="background: blue"
+      >Rank : {{ listUserOfATeamItem.rank }}</span
+    >
+    <span class="level" style="background: grey"
+      >Point : {{ listUserOfATeamItem.points }}</span
+    >
+  </li>
+</div>

@@ -1,0 +1,55 @@
+<div class="container content">
+  <p>{{ message }}</p>
+  <button ng-click="order = 'name'">Order by name</button>
+  <button ng-click="order = '-team'">Order by team (desc)</button>
+  <ul>
+    <input class="form-control m-mb20" type="text" ng-model="search" />
+    <li ng-repeat="listUserItem in listUser | orderBy: order | filter: search">
+      <a ng-href="#/teams/{{ listUserItem.team }}">
+        <img
+          ng-src="static/images/car.jpg"
+          style="margin: -12px 10px 0 0; float: left; height: 50px;"
+        />
+        <h3>
+          {{ listUserItem.driver }} ({{ listUserItem.country.toUpperCase() }}) -
+          Team
+          {{ listUserItem.team }}
+        </h3>
+      </a>
+      <div class="remove" ng-click="removePerson(listUserItem)">x</div>
+      <span class="level" style="background: blue"
+        >Rank : {{ listUserItem.rank }}</span
+      >
+      <span class="level" style="background: grey"
+        >Point : {{ listUserItem.points }}</span
+      >
+    </li>
+  </ul>
+  <!-- <form ng-submit="addPerson()">
+    <input
+      class="form-control"
+      type="text"
+      placeholder="country"
+      ng-model="newPerson.country"
+    />
+    <input
+      class="form-control"
+      type="text"
+      placeholder="driver"
+      ng-model="newPerson.driver"
+    />
+    <input
+      class="form-control"
+      type="text"
+      placeholder="points"
+      ng-model="newPerson.points"
+    />
+    <input
+      class="form-control"
+      type="text"
+      placeholder="team"
+      ng-model="newPerson.team"
+    />
+    <input type="submit" value="Add new person" />
+  </form> -->
+</div>
