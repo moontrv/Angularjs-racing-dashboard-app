@@ -1,6 +1,10 @@
 # Test
 run: 
-    npm install karma
+```
+npm install karma
+karma start
+```
+5 test cases should pass
 
 # Exercise
 
